@@ -1,0 +1,135 @@
+body {
+	background-color: #c2f8a1;
+	color: black;
+	margin: 0;
+	font-family: Times New Roman;
+}
+
+.darkMode {
+	background-color: black;
+	color: rgb(0, 255, 100);
+	margin: 0;
+}
+
+.heading {
+	background-color: none;
+	text-align: center;
+	margin-top: 0.5vw;
+}
+
+.menu a {
+	background-color: purple;
+	color: red;
+	font-size: 2vw;
+	padding: 1vh 3vw 1vh 3vw;
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: #ccc;
+}
+
+.footer {
+	background-color: #333;
+	color: #ddd;
+}
+
+.title {
+	text-align: center;
+	margin: 2%;
+}
+
+.row {
+	align-content: center;
+	margin: 0 5% 0 5%;
+}
+
+.column {
+	float: left;
+	width: 32%;
+	padding: 0.5vw;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.appArea {
+	background-color: rgb(130, 150, 189);
+	margin: 0;
+	border-bottom: ridge 0.2vw gray;
+}
+
+.appArea:nth-child(even) {
+	background-color: rgb(150, 130, 180);
+}
+
+.appTitle {
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1vw 0 1vw 0;
+}
+
+.darkMode .appArea {
+	background-color: #111;
+}
+
+.darkMode .appArea:nth-child(even) {
+	background-color: #222;
+}
+
+.workArea {
+	padding: 1vw;
+}
+
+.workAreaEnc, .workAreaNum {
+	text-align: center;
+	padding-bottom: 1vw;
+}
+
+.workAreaNum span {
+	vertical-align: middle;
+}
+
+.appTitle p {
+	font-style: italic;
+}
+
+button {
+	margin: 0.2vw;
+	font-size: 1vw;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+input {
+	font-size: 1vw;
+	margin: 0.2vw;
+	background-color: rgba(255, 255, 255, 0.6);
+	width: 10ch;
+}
+
+::placeholder {
+	color: #000;
+	opacity: 0.8;
+}
+
+textarea {
+	font-size: 1vw;
+	background-color: rgba(255, 255, 255, 0.6);
+	margin: 0.5vw;
+}
+
+i {
+	display: none;
+}
+
+#lifePath {
+	font-size: 3vw;
+	font-weight: bold;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en">
+	<meta charset="utf-8">
+	<title>My app</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<script type="text/javascript" src="app.js"></script>
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="heading">
+		<div class="menu">
+			<a onclick="darkToggle()">Dark Mode</a>
+			<a>Apps</a>
+		</div>
+	</div>
+	<div class="title">
+		<h1>My WebApp Testing Page</h1>
+		<p>Here I will be testing the functionalities of my first web app created with JavaScript only.</p>
+	</div>
+	<div class="apps">
+		<div class="appArea">
+			<div class="appTitle">
+				<h2>Fibonacci sequence</h2>
+				<p>Here are three different methods of calculating Fibonacci sequence. Enter the number and press the corresponding button to see the result.</p>
+			</div>
+			<div class="row">
+				<div class="column">
+					<p>This method will calculate the requested length of sequence. E.g. if you input number 8, the result will display 8 numbers in Fibonacci sequence.</p>
+					<input id="fibInput1" type="number" min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					<button onclick="fib(getElementById('fibInput1').value)">Show sequence</button>
+					<p id="fib1"></p>
+				</div>
+				<div class="column">
+					<p>This method will show the sequence between 0 and requested number, e.g. numbers from 0 to 1000, just enter 1000 and click the button to see the result.</p>
+					<input id="fibInput2" type="number" min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					<button onclick="fibo(getElementById('fibInput2').value)">Show sequence</button>
+					<p id="fib2"></p>
+					<p id="fib3"></p>
+				</div>
+				<div class="column">
+					<p>Third method shows the n-th number in Fibonacci sequence. Just enter the number you want. For example, the 9th numbre in sequence is 21. Try it now!</p>
+					<input id="fibInput3" type="number" min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					<button onclick="fibon(getElementById('fibInput3').value)">Show sequence</button>
+					<p id="fib4"></p>
+				</div>
+			</div>
+		</div>
+		<div class="appArea">
+			<div class="appTitle">
+				<h2>Encrypter/decrypter</h2>
+				<p>App to encrypt and decrypt the text using AES encryption/decryption</p>
+			</div>
+			<div class="workAreaEnc">
+				<p>Simply enter the text you want encrypted / decrypted, enter the passphrase, and simply press the corresponding button.</p>
+				<textarea id="entry" rows="5" cols="40" placeholder="Enter the text to encrypt or decrypt."></textarea>
+				<textarea id="result" rows="5" cols="40" placeholder="The result will be shown here..."></textarea><br>
+				<button onclick="encod(0)">Encrypt</button>
+				<input type="text" id="pass" placeholder="Enter passphrase" style="width: 15ch;">
+				<button onclick="encod(1)">Decrypt</button>
+			</div>
+		</div>
+		<div class="appArea">
+			<div class="appTitle">
+				<h2>Numerology App</h2>
+				<p>Calculate your Life Path number from your date of birth</p>
+			</div>
+			<div class="workAreaNum">
+				Date Of Birth: <input style="width: 11ch;" type="text" id="birth" placeholder="DDMMYYYY" min="1" maxlength="8" max="8" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+				<button onclick="numerology()">Calculate</button>
+				<p>Your Life Path number is: <span id="lifePath"></span></p>
+			</div>
+		</div>
+		<div class="appArea">
+			<div class="appTitle">
+				<h2>Unit Conversion App</h2>
+				<p>This App will convert units from one unit system to another.</p>
+			</div>
+			<div class="workArea">
+				<p>First select the unit type:  <select id="unitType">
+					<option value="length">Length</option>
+					<option value="area">Area</option>
+					<option value="weight">Weight</option>
+					<option value="volume">Volume</option>
+				</select></p>
+				<p>Select the unit pairs: </p>
+			</div>
+		</div>
+		<div class="appArea">
+			<div class="appTitle">
+				<h2>System Information App</h2>
+				<p>Here is the app for getting your system information</p>
+			</div>
+			<div class="workArea">
+				<p>Just click the button and see for yourself!</p>
+				<button onclick="info()">View My System Information</button>
+				<p id="res01"></p>
+				<p id="res02"></p>
+				<p id="res03"></p>
+				<p id="res04"></p>
+				<p id="res05"></p>
+				<p id="res06"></p>
+				<p id="res07"></p>
+				<p id="res08"></p>
+				<p id="res09"></p>
+				<p id="res10"></p>
+				<p id="res11"></p>
+				<p id="res12"></p>
+				<p id="res13"></p>
+				<p id="res14"></p>
+				<p id="res15"></p>
+				<p id="res16"></p>
+				<p id="res17"></p>
+				<p id="res18"></p>
+				<p id="res19"></p>
+				<p id="res20"></p>
+				<p id="res21"></p>
+				<p id="res22"></p>
+				<p id="res23"></p>
+				<p id="res24"></p>
+				<p id="res25"></p>
+				<p id="res26"></p>
+				<p id="res27"></p>
+				<p id="res28"></p>
+				<p id="res29"></p>
+				<p id="res30"></p>
+				<p id="res31"></p>
+				<p id="res32"></p>
+				<p id="res33"></p>
+				<p id="res34"></p>
+				<p id="res35"></p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="row">
+			<div class="column">
+				<h3>Popular links</h3>
+				<ul>
+					<li>link 1</li>
+					<li>link 2</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Follow me on:</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Support is welcome</h3>
+				<p>Your support is always welcome. Even though everything is open source and freely available, by supporting me, you are making sure I will keep up with development and publish more content much sooner.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
